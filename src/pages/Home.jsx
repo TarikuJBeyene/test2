@@ -24,19 +24,36 @@ export default function Home() {
     }
 
     return (
-        <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            {posts.length === 0 ? (
-                <p>No posts published yet.</p>
-            ) : (
-                posts.map((post) => (
-                    <article key={post.slug} className="card">
-                        <h2 className="card-title">{post.title}</h2>
-                        <div className="card-date">{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
-                        <p className="card-excerpt">{post.excerpt}</p>
-                        <Link to={`/post/${post.slug}`} className="btn">Read Article</Link>
-                    </article>
-                ))
-            )}
+        <div>
+            <section className="hero">
+                <div className="hero-content">
+                    <h1>Partnering with HEOR teams to transform RWE into high-quality, credible scientific publications that make an impact</h1>
+                    <p>Sample blog posts showcasing the new design system.</p>
+                </div>
+            </section>
+
+            <section className="section">
+                <div className="container">
+                    <div className="article-list">
+                        {posts.length === 0 ? (
+                            <p>No posts published yet.</p>
+                        ) : (
+                            posts.map((post) => (
+                                <article key={post.slug} className="article-item">
+                                    <h2 className="article-title">
+                                        <Link to={`/post/${post.slug}`}>{post.title}</Link>
+                                    </h2>
+                                    <div className="article-meta">
+                                        {new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                                    </div>
+                                    <p className="article-excerpt">{post.excerpt}</p>
+                                    <Link to={`/post/${post.slug}`} className="btn-outline btn" style={{ marginTop: '0.5rem' }}>Read Article</Link>
+                                </article>
+                            ))
+                        )}
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }

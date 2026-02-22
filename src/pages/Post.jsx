@@ -40,22 +40,24 @@ export default function Post() {
     }
 
     return (
-        <article className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <Link to="/" style={{ display: 'inline-block', marginBottom: '2rem', color: 'var(--text-muted)' }}>
-                ← Back to all posts
-            </Link>
+        <article className="section">
+            <div className="container" style={{ maxWidth: '800px' }}>
+                <Link to="/" style={{ display: 'inline-block', marginBottom: '2rem', fontSize: '0.875rem', fontWeight: 'bold' }}>
+                    &larr; BACK TO ALL POSTS
+                </Link>
 
-            {postMeta && (
-                <header className="post-header">
-                    <h1 className="post-title">{postMeta.title}</h1>
-                    <div className="post-meta">
-                        Published on {new Date(postMeta.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-                    </div>
-                </header>
-            )}
+                {postMeta && (
+                    <header className="post-header">
+                        <h1 className="post-title">{postMeta.title}</h1>
+                        <div className="article-meta">
+                            Published on {new Date(postMeta.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                        </div>
+                    </header>
+                )}
 
-            <div className="post-content">
-                <ReactMarkdown>{postMarkdown}</ReactMarkdown>
+                <div className="post-content">
+                    <ReactMarkdown>{postMarkdown}</ReactMarkdown>
+                </div>
             </div>
         </article>
     );

@@ -5,10 +5,15 @@ import Post from './pages/Post';
 function App() {
   return (
     <Router basename="/test2/">
-      <div className="container animate-fade-in">
+      <div className="app-wrapper">
         <header className="header">
-          <Link to="/">
-            <h1 className="header-title">Antigravity Blog</h1>
+          <Link to="/" className="header-logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#1E3876" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M2 17L12 22L22 17" stroke="#1E3876" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M2 12L12 17L22 12" stroke="#1E3876" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            HEORpubs
           </Link>
           <nav className="nav-links">
             <Link to="/" className="nav-link">Home</Link>
@@ -22,6 +27,10 @@ function App() {
             <Route path="/post/:slug" element={<Post />} />
           </Routes>
         </main>
+
+        <footer className="footer">
+          <p>© 2026 HEORpubs Clone. All rights reserved.</p>
+        </footer>
       </div>
     </Router>
   );
