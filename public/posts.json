@@ -1,0 +1,14 @@
+[
+    {
+        "slug": "hello-world",
+        "title": "Welcome to Antigravity Blog",
+        "date": "2026-02-22",
+        "excerpt": "This is a demonstration of an easily publishable blog architecture using React and Vite."
+    },
+    {
+        "slug": "design-system",
+        "title": "Applying Modern Design Aesthetics",
+        "date": "2026-02-20",
+        "excerpt": "A deep dive into creating flexible, premium dark-mode visuals utilizing Vanilla CSS glassmorphism."
+    }
+]
