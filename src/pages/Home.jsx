@@ -7,7 +7,7 @@ export default function Home() {
 
     useEffect(() => {
         // Fetch the posts.json manifest from the public folder
-        fetch('/posts.json')
+        fetch(`${import.meta.env.BASE_URL}posts.json`)
             .then((res) => res.json())
             .then((data) => {
                 setPosts(data);

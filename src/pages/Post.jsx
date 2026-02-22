@@ -10,7 +10,7 @@ export default function Post() {
 
     useEffect(() => {
         // 1. Fetch metadata from posts.json to get the title and date
-        fetch('/posts.json')
+        fetch(`${import.meta.env.BASE_URL}posts.json`)
             .then((res) => res.json())
             .then((data) => {
                 const meta = data.find((p) => p.slug === slug);
@@ -19,7 +19,7 @@ export default function Post() {
             .catch((err) => console.error('Error fetching post metadata:', err));
 
         // 2. Fetch the actual markdown content
-        fetch(`/posts/${slug}.md`)
+        fetch(`${import.meta.env.BASE_URL}posts/${slug}.md`)
             .then((res) => {
                 if (!res.ok) throw new Error('Post not found');
                 return res.text();

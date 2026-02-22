@@ -4,7 +4,7 @@ import Post from './pages/Post';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/test2/">
       <div className="container animate-fade-in">
         <header className="header">
           <Link to="/">
