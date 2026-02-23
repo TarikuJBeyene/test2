@@ -27,8 +27,12 @@ export default function Home() {
         <div>
             <section className="hero">
                 <div className="hero-content">
-                    <h1>Partnering with HEOR teams to transform RWE into high-quality, credible scientific publications that make an impact</h1>
-                    <p>Sample blog posts showcasing the new design system.</p>
+                    <h1>Dr. Tariku J. Beyene</h1>
+                    <p style={{ marginTop: '1rem', lineHeight: '1.8' }}>
+                        Epidemiology | Public Health | Data Analysis | Modeling
+                        <br />
+                        <span style={{ opacity: 0.8, fontSize: '1rem' }}>Kansas State University</span>
+                    </p>
                 </div>
             </section>
 

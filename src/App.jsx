@@ -13,11 +13,11 @@ function App() {
               <path d="M2 17L12 22L22 17" stroke="#1E3876" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M2 12L12 17L22 12" stroke="#1E3876" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            HEORpubs
+            Dr. Tariku Jibat
           </Link>
           <nav className="nav-links">
             <Link to="/" className="nav-link">Home</Link>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="nav-link">GitHub</a>
+            <a href="https://github.com/TarikuJBeyene" target="_blank" rel="noopener noreferrer" className="nav-link">GitHub</a>
           </nav>
         </header>
 
@@ -29,7 +29,7 @@ function App() {
         </main>
 
         <footer className="footer">
-          <p>© 2026 HEORpubs Clone. All rights reserved.</p>
+          <p>© 2026 Dr. Tariku J. Beyene. All rights reserved.</p>
         </footer>
       </div>
     </Router>
